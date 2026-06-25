@@ -1,6 +1,7 @@
 import os
 
-from seleção import cadastrar_seleção, lista_selecao, buscar_nome, filtrar_grupo_e_conf, ordenar_selecao
+from selecao import cadastrar_seleção, lista_selecao, buscar_nome, filtrar_grupo_e_conf, ordenar_selecao
+from persistencia import salvar_selecoes, carregar_selecoes
 
 
 def main():
@@ -31,7 +32,7 @@ def main():
     0 - sair >> '''
 
     opcao = int(input(menu))
-    selecoes = []
+    selecoes = carregar_selecoes()
 
     while opcao != 0: 
         if opcao == 1:
@@ -47,10 +48,12 @@ def main():
         elif opcao == 4:
             filtrar_grupo_e_conf(selecoes)
 
-        
-
-
+        elif opcao == 12:
+            salvar_selecoes(selecoes)
 
         opcao = int(input(menu))
+
+    salvar_selecoes(selecoes)
+    print("Dados salvos com sucesso!")    
 
 main()          
