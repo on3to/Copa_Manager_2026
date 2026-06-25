@@ -1,7 +1,9 @@
 import os
 
 from selecao import cadastrar_seleção, lista_selecao, buscar_nome, filtrar_grupo_e_conf, ordenar_selecao
-from persistencia import salvar_selecoes, carregar_selecoes
+from persistencia import salvar_selecoes, carregar_selecoes, salvar_jogadores , carregar_jogadores, salvar_partidas, carregar_partidas
+from jogador import cadastrar_jogador, lista_jogador, filtrar_jogador, estatisticas_jogadores
+from partidas import cadastrar_partida, listar_partidas , tabela_classificacao
 
 
 def main():
@@ -33,6 +35,8 @@ def main():
 
     opcao = int(input(menu))
     selecoes = carregar_selecoes()
+    jogadores = carregar_jogadores()
+    patidas = carregar_partidas()
 
     while opcao != 0: 
         if opcao == 1:
@@ -41,12 +45,32 @@ def main():
         elif opcao == 2:
             lista_selecao(selecoes)
 
-
         elif opcao == 3:
             buscar_nome(selecoes)    
 
         elif opcao == 4:
             filtrar_grupo_e_conf(selecoes)
+
+        elif opcao == 5:
+            cadastrar_jogador(selecoes, jogadores)
+
+        elif opcao == 6:
+            lista_jogador(selecoes, jogadores)    
+
+        elif opcao == 7:
+            filtrar_jogador(selecoes, jogadores)
+
+        elif opcao == 8:
+            estatisticas_jogadores(jogadores)
+
+        elif opcao == 9:
+            cadastrar_partida(selecoes, patidas)
+
+        elif opcao == 10:
+            listar_partidas(selecoes, patidas)
+
+        elif opcao == 11:
+            tabela_classificacao(selecoes, patidas)        
 
         elif opcao == 12:
             salvar_selecoes(selecoes)

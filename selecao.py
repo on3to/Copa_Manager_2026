@@ -36,7 +36,7 @@ def lista_selecao(selecoes):
         if opcao == 1: 
             imprimir_selecoes(selecoes)
         elif opcao == 2:
-                ordenar_selecao(selecoes)
+            ordenar_selecao(selecoes)
         opcao = int(input(menu))        
 
 def imprimir_selecoes(selecoes):
