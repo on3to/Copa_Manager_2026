@@ -87,7 +87,7 @@ def lista_jogador(selecoes, jogadores):
 
         elif opcao == 2:
 
-            menu = '''
+            menu_ordenar = '''
             |>>> Ordenar <<<|
 
             Ordenar por:
@@ -97,23 +97,26 @@ def lista_jogador(selecoes, jogadores):
             3 - Gols
 
             ----------------
-            0 - Sair >>
+            0 - Voltar >>
             '''
 
-            opcao = int(input(menu))
+            opcao_ordenar = int(input(menu_ordenar))
 
-            if opcao == 1:
+            if opcao_ordenar == 1:
                 atributo = "nome"
 
-            elif opcao == 2:
+            elif opcao_ordenar == 2:
                 atributo = "idade"
 
-            elif opcao == 3:
+            elif opcao_ordenar == 3:
                 atributo = "gols"
+
+            elif opcao_ordenar == 0:
+                continue
 
             else:
                 print("Opção inválida")
-                return
+                continue
 
             menu_ordem = '''
             |>>> Ordem <<<|

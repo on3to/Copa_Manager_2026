@@ -1,0 +1,96 @@
+# Copa Manager 2026
+
+## Descrição
+
+O Copa Manager 2026 é um sistema desenvolvido em Python para o gerenciamento de seleções, jogadores e partidas da Copa do Mundo FIFA 2026.
+
+O sistema utiliza listas de dicionários para armazenar os dados durante a execução e realiza a persistência das informações em arquivos `.txt`, permitindo que os dados sejam recuperados nas próximas execuções do programa.
+
+---
+
+## Funcionalidades
+
+### Seleções
+- Cadastro de seleções
+- Listagem e ordenação
+- Busca por nome
+- Filtro por grupo e confederação
+
+### Jogadores
+- Cadastro de jogadores vinculados a uma seleção
+- Listagem e ordenação
+- Filtro por seleção e posição
+- Estatísticas:
+  - Artilheiro
+  - Média de idade
+  - Total de gols
+
+### Partidas
+- Cadastro de partidas
+- Listagem de partidas
+- Tabela de classificação por grupo
+
+### Persistência
+- Salvar dados em arquivos `.txt`
+- Carregar automaticamente os dados ao iniciar o programa
+
+---
+
+## Estrutura do Projeto
+
+```
+main.py
+selecao.py
+jogador.py
+partidas.py
+persistencia.py
+utils.py
+
+selecoes.txt
+jogadores.txt
+partidas.txt
+```
+
+---
+
+## Requisitos
+
+- Python 3 ou superior.
+
+---
+
+## Como executar
+
+1. Coloque todos os arquivos do projeto na mesma pasta.
+2. Abra um terminal na pasta do projeto.
+3. Execute o arquivo principal:
+
+```bash
+python main.py
+```
+
+Caso o comando acima não funcione:
+
+```bash
+python3 main.py
+```
+
+---
+
+## Persistência dos Dados
+
+O sistema salva automaticamente todas as informações ao encerrar o programa e também permite salvar manualmente através da opção **12** do menu principal.
+
+Os dados são armazenados nos seguintes arquivos:
+
+- `selecoes.txt`
+- `jogadores.txt`
+- `partidas.txt`
+
+---
+
+## Autor
+
+**Neto**
+
+Projeto desenvolvido para a disciplina de Algoritmos e Programação.

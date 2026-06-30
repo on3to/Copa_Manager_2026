@@ -124,7 +124,7 @@ def ordenar_selecao(selecoes):
         atributo = "titulos"
     
     else:
-        print("Opção ivalida")
+        print("Opção inválida")
         return   
 
     menu_ordem = '''
@@ -145,7 +145,7 @@ def ordenar_selecao(selecoes):
         reverse = True   
 
     else:
-        print("Opção invalida")
+        print("Opção inválida")
         return    
 
     selecoes_ordenadas = sorted(selecoes, key=lambda selecao:selecao[atributo], reverse=reverse)    
